@@ -1,0 +1,126 @@
+/* Custom styles to complement Tailwind CSS */
+
+/* Smooth scrolling behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom focus styles */
+.focus-ring:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-spinner {
+    animation: spin 1s linear infinite;
+}
+
+/* Fade in animation for results */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+/* Result card hover effect */
+.result-card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.result-card:hover {
+    transform: translateY(-2px);
+}
+
+/* Custom input styles */
+.custom-input {
+    transition: border-color 0.2s ease-in-out;
+}
+
+.custom-input:focus {
+    border-color: #4F46E5;
+}
+
+/* Error message styling */
+.error-message {
+    background-color: #FEE2E2;
+    border-left: 4px solid #DC2626;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.375rem;
+}
+
+/* Success message styling */
+.success-message {
+    background-color: #DCFCE7;
+    border-left: 4px solid #16A34A;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.375rem;
+}
+
+/* Responsive font sizes */
+@media (max-width: 640px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .lead {
+        font-size: 1.125rem;
+    }
+}
+
+/* Hero section gradient overlay */
+.hero-overlay {
+    background: linear-gradient(
+        to right,
+        rgba(37, 99, 235, 0.9),
+        rgba(67, 56, 202, 0.9)
+    );
+}
+
+/* Button hover animation */
+.animate-button {
+    transition: all 0.2s ease-in-out;
+}
+
+.animate-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
